@@ -1,0 +1,357 @@
+:root {
+    --accent-1: #495867;
+    --accent-2: #ce796b;
+    --font-1: #333;
+    --font-2: #fff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lexend Mega', sans-serif;
+}
+
+html {
+}
+
+/* Nav */
+.nav-wrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0,0,0,0.35);
+}
+
+.bg-dark {
+    background: transparent !important;
+}
+
+/* Content */
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    height: 100vh;
+    top: 0px;
+    position: sticky;
+    flex-direction: column;
+    overflow: hidden;
+    scroll-snap-align: start;
+    left: 0px;
+    width: 100%;
+    filter: drop-shadow(0px 0px 24px rgba(0,0,0,0.3));
+}
+
+.padded {
+    padding: 0px 16px;
+}
+
+.rounded-top {
+    border-radius: 0px !important;
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+}
+
+.narrow {
+    max-width: 100ch;
+}
+
+.flat {
+    filter: none;
+    box-shadow: none !important;
+}
+
+.no-background {
+    background: transparent !important;
+}
+
+.rounded > .section-header, .padded > .section-header {
+    display: none;
+}
+
+.section.scroll-with-page {
+    position: relative;
+}
+
+.section.height-fit-content {
+    height: unset;
+}
+
+.inner-content {
+    z-index: 5;
+    padding: 50px 25px;
+    flex: 1 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #fff;
+}
+
+.inner-content p {
+    max-width: 60ch;
+}
+
+.filler {
+    flex: 10 100%;
+}
+
+.section-title {
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.section-title:not(:first-child) {
+    margin-top: 50px;
+}
+
+.section-title::after {
+    content: " ";
+    height: 2px;
+    width: 50px;
+    background-color: var(--accent-2);
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 25px);
+}
+
+.section-content.center p, .section-content.center {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-image {
+    margin-bottom: 15px;
+}
+
+.section-image img {
+    max-width: 100%;
+}
+
+.section-image.shadow img {
+    filter: drop-shadow(0px 0px 24px rgba(0,0,0,0.3));
+}
+
+.section-bottom {
+    z-index: 10;
+}
+
+.accent-2 {
+    background-color: var(--accent-2) !important;
+}
+
+.accent-1 {
+    background-color: var(--accent-1) !important;
+}
+
+em.accent-2 {
+    font-style: normal;
+    color: var(--accent-2);
+    background-color: unset !important;
+}
+
+em.accent-1 {
+    font-style: normal;
+    color: var(--accent-1);
+    background-color: unset !important;
+}
+
+.section-header {
+    flex: 2 25%;
+    background-color: #fff;
+    width: 100%;
+}
+
+.section-header.angled-right {
+    transform: rotate(2deg);
+    width: 200%;
+    transform-origin: 0px 0px;
+}
+
+.section-header.angled-left {
+    transform: rotate(-2deg);
+    width: 200%;
+    transform-origin: 100% 0px;
+}
+
+p, p * {
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input, textarea {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: var(--accent-2)
+}
+
+a.hidden {
+        width: 100%;
+    height: 100%;
+    content: " ";
+    display: block;
+}
+
+hr {
+    width: 50px;
+    margin: 0px;
+    margin-bottom: 15px;
+    opacity: 1;
+}
+
+/* Sections*/
+
+/* Header */
+.header {
+    background-color: var(--accent-1);
+}
+
+.header .inner-content {
+    background-color: var(--accent-1);
+}
+
+/* Overview */
+.overview .inner-content{
+    background-color: white;
+}
+
+/* How */
+.how .inner-content {
+    background-color: var(--accent-2);
+    color: var(--font-2);
+}
+
+/* Footer */
+.footer {
+    height: unset;
+}
+
+.footer .inner-content {
+    background-color: #444;
+    color: var(--font-2);
+}
+
+/* Typography */
+.page-title, .page-subtitle {
+    text-align: center;
+    color: var(--font-2);
+}
+
+.page-title {
+    margin-top: 25px;
+}
+
+.page-subtitle h2 {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+/* Columns */
+.columns {
+    display: flex;
+    flex-direction: column;
+}
+
+.column {
+    flex: 1;
+    background-color: white;
+    color: var(--font-1);
+    box-shadow: 0px 0px 24px rgba(0,0,0,0.3);
+    padding: 16px;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
+.column-img img{
+    max-width: 100%;
+}
+
+.column-img {
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.column-title {
+    margin-bottom: 10px;
+}
+
+/* Scroll Down Arrow */
+.scroll-down {
+    width: 100%;
+    height: 64px;
+    position: relative;
+    --arrow-width: 2px;
+    flex: 2 50%;
+    animation-name: animate-arrow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    opacity: 0.5;
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+.scroll-down::before {
+    content: " ";
+    width: 50px;
+    transform: rotate(45deg);
+    background-color: var(--font-2);
+    height: var(--arrow-width);
+    transform-origin: 100%;
+}
+
+.scroll-down::after {
+    content: " ";
+    width: 50px;
+    transform: rotate(-45deg);
+    background-color: var(--font-2);
+    height: var(--arrow-width);
+    transform-origin: 0px;
+}
+
+@keyframes animate-arrow {
+    0%  {top:0px; opacity: 0.5;}
+    20%  {top:10px; opacity: 1;}
+    40% {top:0px; opacity: 0.5;}
+}
+
+@media only screen and (min-width: 764px) {
+
+    html {
+    }
+
+    .columns {
+        max-width: 60ch;
+        flex-direction: row;
+    }
+
+    .column {
+        margin-right: 8px;
+    }
+
+    .column:last-of-type {
+        margin-right: 0px;
+    }
+}
